@@ -7,6 +7,7 @@ connection = pymysql.connect (
     db='db_restoran',
 )
 
+print("=====INPUT DATA KATEGORI MAKANAN=====")
 kd_kategori = input ("Kd Kategori : ")
 kategori = input ("Kategori : ")
 

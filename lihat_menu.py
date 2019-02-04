@@ -9,18 +9,17 @@ connection = pymysql.connect (
 
 try:
     with connection.cursor () as cursor:
-        sql = "SELECT kd_kategori, kategori, 'desc' FROM tb_kategori"
+        sql = "SELECT kd_menu, menu, jenis, harga, status, foto, kd_kategori 'desc' FROM tb_menu"
         try:
             cursor.execute (sql)
             result = cursor.fetchall ()
-
-            print ("Kode Kategori\t\t\tKategori")
+            print ("Kode Menu\tMenu\tJenis\tHarga\tStatus\tFoto\tKode Kategori")
             print ("----------------------------------------------------------")
             for row in result:
-                print (str (row[0]) + "\t\t\t\t" + row[1] )
-
+                print (str (row[0]) + "\t" + row[1]+ "\t" + row[2])
         except:
             print ("Oops! Something wrong")
+
 
     connection.commit ()
 finally:

@@ -7,6 +7,7 @@ connection = pymysql.connect (
     db='db_restoran',
 )
 
+
 kd_menu = input ("Kode Menu : ")
 menu = input ("Menu : ")
 jenis = input ("Jenis : ")
